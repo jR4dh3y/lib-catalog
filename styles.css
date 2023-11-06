@@ -1,19 +1,55 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+html,body{
+    width : 100%;
+    height : 100%;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat",Arial, sans-serif;
     text-align: center;
 }
-
-h1 {
-    color: #333;
+#main{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
+#main h1 {
+    font-size: 80px;
+    color: #333;
+    padding-bottom: 50px;
+    position: relative;
+}
+#main h1::before{
+    content:"College Library" ;
+    position: absolute;
+    top: -1%;
+    left: -1%;
+    z-index: -1;
+    color: #ccc;
+}
+video{
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 .book {
-    border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     display: inline-block;
     text-align: left;
     width: 200px;
+    background-color: #ccc;
 }
 
 .book h2 {
@@ -23,5 +59,5 @@ h1 {
 
 .book p {
     font-size: 14px;
-    margin: 5px 0;
+   margin: 5px 0;
 }
